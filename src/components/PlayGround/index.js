@@ -9,10 +9,10 @@ import ReactFlow, {
 import { useDrop } from "react-dnd";
 
 import "reactflow/dist/style.css";
-import Header from "./Header";
-import RightPanel from "./RightPanel";
 import MessageNode from "./MessageNode";
 import { v4 as uuid } from 'uuid';
+
+import RightPanel from "../RightPanel";
 
 const PlayGround = () => {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
@@ -68,8 +68,6 @@ const PlayGround = () => {
 
   return (
     <React.Fragment>
-      <div className="flex column">
-        <Header />
         <div className="flex">
           <ReactFlow
             ref={drop}
@@ -83,7 +81,6 @@ const PlayGround = () => {
           />
           <RightPanel setNodes={setNodes} />
         </div>
-      </div>
     </React.Fragment>
   );
 };

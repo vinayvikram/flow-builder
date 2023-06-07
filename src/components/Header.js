@@ -12,19 +12,17 @@ const Header = () => {
     if (nodes.length > 1) {
       const targets = edges.map((e) => e.target);
 
-      console.log(targets);
-
       const targetsSet = new Set(targets);
-
-      console.log(targetsSet);
-
-      console.log(nodes);
 
       if (targetsSet.size < nodes.length - 1) {
         setSaveMessage({
           type: "error",
           message: "Cannot save flow"
         });
+
+        setTimeout(() => {
+          setSaveMessage({ type: "", message: ""})
+        }, 2000)
 
         return;
       }
@@ -34,13 +32,13 @@ const Header = () => {
       type: "success",
       message: "Saved Successfully!"
     });
-  }, [nodes, edges, setSaveMessage]);
 
-  useEffect(() => {
     setTimeout(() => {
       setSaveMessage({ type: "", message: ""})
     }, 2000)
-  },[saveMessage])
+
+  }, [nodes, edges, setSaveMessage]);
+
 
   return (
     <div className="header">

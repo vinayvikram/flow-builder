@@ -1,7 +1,7 @@
 import React from "react";
 import { useNodes } from "reactflow";
-import NodesPanel from "./NodesPanel";
 import SettingsPanel from "./SettingsPanel";
+import NodesPanel from "./NodesPanel";
 
 const RightPanel = ({ setNodes }) => {
   const nodes = useNodes();

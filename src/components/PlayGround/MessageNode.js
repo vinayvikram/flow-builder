@@ -6,7 +6,7 @@ import {
   useNodeId,
   useStore
 } from "reactflow";
-import MessageIcon from "./MessageIcon";
+import MessageIcon from "../Icons/MessageIcon";
 
 const MessageNode = ({ data, isConnectable }) => {
   const selector = (s) => ({
