@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import ReactFlow, {
   useNodesState,
   useEdgesState,
@@ -12,6 +12,7 @@ import "reactflow/dist/style.css";
 import Header from "./Header";
 import RightPanel from "./RightPanel";
 import MessageNode from "./MessageNode";
+import { v4 as uuid } from 'uuid';
 
 const PlayGround = () => {
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
@@ -25,7 +26,7 @@ const PlayGround = () => {
     (offset) => {
       const newNodes = nodes.concat([
         {
-          id: String(nodes.length + 1),
+          id: uuid(),
           type: "messageNode",
           position: {
             x: (offset.x - x) / zoom,

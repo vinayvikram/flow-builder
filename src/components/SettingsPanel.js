@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import { useNodes } from "reactflow";
 
 const SettingsPanel = ({ selectedNode, setNodes }) => {
@@ -35,7 +35,7 @@ const SettingsPanel = ({ selectedNode, setNodes }) => {
       <div className="settings-panel-body">
         Text
         <textarea
-          defaultValue={nodes.find((n) => n.id === selectedNode.id).data.label}
+          value={nodes.find((n) => n.id === selectedNode.id).data.label}
           onChange={(e) => changeNodeMessage(e.target.value)}
         />
       </div>

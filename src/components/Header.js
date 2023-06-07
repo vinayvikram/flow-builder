@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useEdges, useNodes } from "reactflow";
 
 const Header = () => {
@@ -35,6 +35,12 @@ const Header = () => {
       message: "Saved Successfully!"
     });
   }, [nodes, edges, setSaveMessage]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSaveMessage({ type: "", message: ""})
+    }, 2000)
+  },[saveMessage])
 
   return (
     <div className="header">
