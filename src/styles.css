@@ -1,0 +1,123 @@
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  padding-right: 50px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.save-message-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.save-message {
+  width: fit-content;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.save-message.success {
+  background-color: #6feda6;
+}
+
+.save-message.error {
+  background-color: #ed7e6f;
+}
+
+.save-button {
+  border: 1px solid #2c9cf2;
+  border-radius: 4px;
+  padding: 5px;
+  color: #095996;
+}
+
+.playground {
+  flex: 1;
+}
+
+.nodes-panel,
+.settings-panel {
+  width: 250px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.sample-message-node {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2c9cf2;
+  padding: 12px;
+  border-radius: 4px;
+  width: 50%;
+  color: #2c9cf2;
+}
+
+.message-node {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: grey;
+}
+
+.message-node-header {
+  display: flex;
+  gap: 4px;
+  background-color: #99f2bb;
+  align-items: center;
+  padding: 8px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.message-node-body {
+  padding: 8px;
+}
+
+.settings-panel-header {
+  display: flex;
+  gap: 8px;
+  padding: 24px;
+  border-bottom: 1px solid black;
+}
+
+.settings-back-button {
+  cursor: pointer;
+}
+
+.settings-panel-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
