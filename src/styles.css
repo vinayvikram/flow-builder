@@ -85,9 +85,13 @@ body {
 
 .message-node {
   width: 200px;
-  border: 1px solid black;
   border-radius: 4px;
-  box-shadow: grey;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.message-node.selected {
+  border: 1.5px solid #095996;
+  border-radius: 4px;
 }
 
 .message-node-header {

@@ -8,7 +8,7 @@ import {
 } from "reactflow";
 import MessageIcon from "../Icons/MessageIcon";
 
-const MessageNode = ({ data, isConnectable }) => {
+const MessageNode = ({ data, selected, isConnectable }) => {
   const selector = (s) => ({
     nodeInternals: s.nodeInternals,
     edges: s.edges
@@ -34,7 +34,7 @@ const MessageNode = ({ data, isConnectable }) => {
         style={{ background: "#555" }}
         isConnectable={isConnectable}
       />
-      <div className="message-node">
+      <div className={`message-node ${selected ? 'selected' : ''}`}>
         <div className="message-node-header">
           <MessageIcon size={16} />
           Send Message
